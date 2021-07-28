@@ -1,13 +1,11 @@
-import * as React from "react"
-import { styles } from '../styles'
+import * as React from 'react'
+import Layout from '../components/layout'
 
 const IndexPage = () => {
   return (
-    <main>
-      <div style={ styles.header }></div>
-      <title>Home Page</title>
-      
-    </main>
+    <Layout pageTitle="Home Page">
+      <p>I'm making this by following the Gatsby Tutorial.</p>
+    </Layout>
   )
 }
 
