@@ -2,6 +2,8 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
+// Stylesheet
+
 import {
   navigation,
   logo,
@@ -9,12 +11,14 @@ import {
   navLi
 } from './navbar.module.css'
 
+// Component
+
 const Navbar = () => {
   return (
     <nav className={navigation}>
       <StaticImage
         alt="Get2Anywhere Logo"
-        src="../images/g2a_logo.png"
+        src="../images/flatlogo.png"
         className={logo}
       />
       <ul className={navUl}>
