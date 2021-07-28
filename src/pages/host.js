@@ -1,13 +1,13 @@
 import * as React from 'react'
 import Navbar from '../components/navbar'
 
-const IndexPage = () => {
+const HostPage = () => {
   return (
     <main>
       <Navbar></Navbar>
-      <h1>Hello Home</h1>
+      <h1>Hello Hosts</h1>
     </main>
   )
 }
 
-export default IndexPage
+export default HostPage
