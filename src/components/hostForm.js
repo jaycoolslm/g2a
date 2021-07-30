@@ -10,6 +10,10 @@ import './hostForm.module.css'
 
 const SignupForm = () => {
 
+    const descriptionHeight = {
+      height: '400px'
+    }
+
     const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
 
     const formik = useFormik({
@@ -105,6 +109,7 @@ const SignupForm = () => {
             id="description"
             name="description"
             type="text"
+            style={descriptionHeight}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.description}

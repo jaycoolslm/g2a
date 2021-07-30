@@ -7,7 +7,7 @@
 }
 
 .navigation {
-  height: 20vh;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,16 +24,16 @@
 }
 
 .navUl {
-  height: inherit;
+  height: 10vh;
   width: 50vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style-type: none;
-  margin-right: 30px;
+  margin-bottom: 0;
 }
 
 .navLi {
   text-decoration: none;
-  color: black;
+  color: #5fa28f;
 }
