@@ -22,7 +22,8 @@ const SignupForm = () => {
         numOfVolunteers: '',
         email: '',
         mobileNum: '',
-        description: ''
+        description: '',
+        language: ''
       },
       validationSchema: Yup.object({
         name: Yup.string()
@@ -33,7 +34,8 @@ const SignupForm = () => {
           .required('Required'),
         email: Yup.string().email('Invalid email address').required('Required'),
         mobileNum: Yup.string().matches(phoneRegExp, 'Phone number is not valid').required('Required'),
-        description: Yup.string().min(100, 'Your volunteering description must be more detailed').required('Required')
+        description: Yup.string().min(100, 'Your volunteering description must be more detailed').required('Required'),
+        language: Yup.string().min(4, 'You must specify what language the volunteers will need to be able to speak').required('Required')
       }),
       onSubmit: values => {
         alert(JSON.stringify(values, null, 2));
@@ -117,6 +119,21 @@ const SignupForm = () => {
           {formik.touched.description && formik.errors.description ? (
             <div>{formik.errors.description}</div>
           ) : null}  
+        </div>
+
+        <div>
+          <label htmlFor="language">Required Language</label>
+          <input
+            id="language"
+            name="language"
+            type="text"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.language}
+          />
+          {formik.touched.language && formik.errors.language ? (
+            <div>{formik.errors.language}</div>
+          ) : null}
         </div>
         
   

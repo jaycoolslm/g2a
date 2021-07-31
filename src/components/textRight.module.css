@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textArea {
+    width: 50%;
+    margin-left: 50%;
+    text-align: justify;
+}
