@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
     "formik": "^2.2.9",
     "gatsby": "^3.10.1",
     "gatsby-plugin-image": "^1.10.1",

@@ -2,11 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
 }
 
 .textArea {
-    width: 40%;
-    margin-right: 50%;
-    text-align: end;
+    margin: auto;
+    text-align: center;
 }

@@ -6,7 +6,11 @@ const HostPage = () => {
   return (
     <main>
       <Navbar></Navbar>
-      <h1>Hello Hosts</h1>
+      <div>
+        <h1>Want to host your own volunteers?</h1>
+      <h3>Use our easy sign up form to begin</h3>
+      </div>
+      
       <SignupForm></SignupForm>
     </main>
   )
