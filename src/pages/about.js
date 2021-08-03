@@ -7,7 +7,7 @@ const AboutPage = () => {
   return (
     <main>
       <Navbar></Navbar>
-      <TextCenter title="What is Get2Anywhere?"></TextCenter>
+      <TextCenter subtitle="What is Get2Anywhere?"></TextCenter>
       <TextLeft 
         subtitle="Who are we?"
         image="../images/g2a_logo.png"

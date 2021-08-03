@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import { useFormik } from "formik"
 import * as Yup from "yup"
-import { TextField, Checkbox } from '@material-ui/core';
+import { TextField, Checkbox, FormControlLabel } from '@material-ui/core';
 
 // Stylesheet
 
@@ -168,12 +168,20 @@ const SignupForm = () => {
           ) : null}  
         </div>
         
-        <div>
-          <Checkbox 
+        <FormControlLabel
+          control={<Checkbox 
             color='primary'
             onChange={handleFoodClick}
-            value="Hello"
-          />
+            
+          />}
+
+          label="Is food included"
+        >
+          
+        </FormControlLabel>
+
+        <div>
+          
         </div>
         
         <div className={foodToggle ? closed : show}>
