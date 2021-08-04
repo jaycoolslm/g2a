@@ -2,11 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 60vh;
 }
 
 .textArea {
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
     padding-bottom: 20vh;
 }

@@ -28,7 +28,7 @@ const IndexPage = () => {
       </div>
         
 
-      <div style={{ backgroundImage: `url(${landing3})` }}>>
+      <div style={{ backgroundImage: `url(${landing3})` }}>
         <TextRight subtitle="For travellers everywhere around the world">
           {/* <p>Volunteering is the most economic way to travel. Unfortunately, finding volunteering opportunities is easier said then done; a quick search on the internet is evidence enough to prove that most 'volunteering organizations' are just money-driven schemes that capatalize on peoples' desires to help and travel.</p> */}
           <p>For us, the idea that volunteering should be free is more than a belief. It is a fundamental truth. Afterall, you are giving your own precious time helping others, and time is more valuable than anything else.</p>

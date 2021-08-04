@@ -19,20 +19,21 @@ const HostPage = () => {
   return (
     <main>
       <Navbar></Navbar>
-      <div classList={display ? hide : show}>
+      <div className={display ? hide : show}>
         <TextCenter
           subtitle="Want to host your own volunteers?"
         >
           <h3>Use our easy sign up form to begin</h3>
           <Button
             onClick={handleClick}
+            color='#5fa28f'
           >
             Apply now
           </Button>
         </TextCenter>
       </div>
       
-      <div classList={display ? show : hide}>
+      <div className={display ? show : hide}>
         <SignupForm></SignupForm>
       </div>
       

@@ -2,10 +2,9 @@ import React, {useState} from "react"
 import { useFormik } from "formik"
 import * as Yup from "yup"
 import { TextField, Checkbox, FormControlLabel } from '@material-ui/core';
+import FastfoodIcon from '@material-ui/icons/Fastfood';
 
 // Stylesheet
-
-import './hostForm.module.css'
 
 import {
   buttonDiv,
@@ -68,7 +67,6 @@ const SignupForm = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.name}
-            multiline
           />
 
           {formik.touched.name && formik.errors.name ? (
@@ -86,7 +84,6 @@ const SignupForm = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.numOfVolunteers}
-            multiline
           />
           {formik.touched.numOfVolunteers && formik.errors.numOfVolunteers ? (
             <div>{formik.errors.numOfVolunteers}</div>
@@ -94,6 +91,7 @@ const SignupForm = () => {
         </div>
         
         <div>
+          
           <TextField 
             variant="outlined"
             id="email"
@@ -103,12 +101,13 @@ const SignupForm = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.email}
-            multiline
           />
+          
 
           {formik.touched.email && formik.errors.email ? (
             <div>{formik.errors.email}</div>
           ) : null}  
+
         </div>
         
         <div>
@@ -122,7 +121,6 @@ const SignupForm = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.mobileNum}
-            multiline
           />
 
           {formik.touched.mobileNum && formik.errors.mobileNum ? (
@@ -141,7 +139,6 @@ const SignupForm = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.location}
-            multiline
           />
 
           {formik.touched.location && formik.errors.location ? (
@@ -168,21 +165,20 @@ const SignupForm = () => {
           ) : null}  
         </div>
         
-        <FormControlLabel
+        <div>
+          <FormControlLabel
           control={<Checkbox 
             color='primary'
             onChange={handleFoodClick}
-            
+            checkedIcon={<FastfoodIcon/>}
           />}
 
           label="Is food included"
         >
           
         </FormControlLabel>
-
-        <div>
-          
         </div>
+        
         
         <div className={foodToggle ? closed : show}>
           <TextField
@@ -194,7 +190,6 @@ const SignupForm = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.food}
-            multiline
           />
 
           {formik.touched.language && formik.errors.language ? (
@@ -212,7 +207,6 @@ const SignupForm = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.language}
-            multiline
           />
 
           {formik.touched.language && formik.errors.language ? (
