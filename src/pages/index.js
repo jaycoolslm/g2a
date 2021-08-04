@@ -3,12 +3,17 @@ import Navbar from '../components/navbar'
 import TextLeft from '../components/textLeft'
 import TextRight from '../components/textRight'
 import TextCenter from '../components/textCenter'
+import { graphql } from 'gatsby'
+import { getImage } from 'gatsby-plugin-image'
 
 import landing from '../images/svg-assets/landingBackground.svg'
 import landing2 from '../images/svg-assets/landingBackground2.svg'
 import landing3 from '../images/svg-assets/landingBackground3.svg'
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+
+  const image = getImage(data.allFile.edges[0].node)
+  const image2 = getImage(data.allFile.edges[1].node)
 
   return (
     <main>
@@ -20,16 +25,14 @@ const IndexPage = () => {
         </TextCenter>
       </div>
       
-      
       <div style={{ backgroundImage: `url(${landing2})` }}>
-        <TextLeft subtitle="For growing businesses around the world">
+        <TextLeft subtitle="For growing businesses around the world" image={image}>
           <p>For small business owners, having volunteers is the perfect way to help grow your business. All you need is a spare room to host your guests and you will be eligible</p>
         </TextLeft>
-      </div>
-        
+      </div>        
 
-      <div style={{ backgroundImage: `url(${landing3})` }}>
-        <TextRight subtitle="For travellers everywhere around the world">
+      <div style={{ backgroundImage: `url(${landing3})`}}>
+        <TextRight subtitle="For travellers everywhere around the world"  image={image2}>
           {/* <p>Volunteering is the most economic way to travel. Unfortunately, finding volunteering opportunities is easier said then done; a quick search on the internet is evidence enough to prove that most 'volunteering organizations' are just money-driven schemes that capatalize on peoples' desires to help and travel.</p> */}
           <p>For us, the idea that volunteering should be free is more than a belief. It is a fundamental truth. Afterall, you are giving your own precious time helping others, and time is more valuable than anything else.</p>
         </TextRight>
@@ -38,5 +41,19 @@ const IndexPage = () => {
     </main>
   )
 }
+
+export const query = graphql`
+query {
+  allFile {
+    edges {
+      node {
+        childImageSharp {
+          gatsbyImageData(width: 200)
+        }
+      }
+    }
+  }
+}
+`
 
 export default IndexPage
