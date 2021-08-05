@@ -13,7 +13,7 @@ const TextLeft = ({subtitle, children, image}) => {
                 <h3>{subtitle}</h3>
                 {children}
             </div>
-            <GatsbyImage image={image}></GatsbyImage>
+            <GatsbyImage image={image} alt='hello'></GatsbyImage>
         </main>
     )
 }

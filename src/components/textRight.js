@@ -10,7 +10,7 @@ import {
 const TextRight = ({subtitle, children, image}) => {
     return (
         <main className={container}>
-            <GatsbyImage image={image}></GatsbyImage>
+            <GatsbyImage image={image} alt="bye"></GatsbyImage>
 
             <div className={textArea}>
                 <h3>{subtitle}</h3>

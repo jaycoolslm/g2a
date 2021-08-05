@@ -1,12 +1,15 @@
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 60vh;
 }
 
 .textArea {
     margin: 0 auto;
     text-align: center;
-    padding-bottom: 20vh;
+}
+
+.textArea p {
+    margin: auto;
+    width: 80%;
 }
