@@ -3,7 +3,7 @@ import Navbar from '../components/navbar'
 import TextCenter from '../components/textCenter'
 import TextLeft from '../components/textLeft'
 
-const AboutPage = () => {
+const VolunteerPage = () => {
   return (
     <main>
       <Navbar></Navbar>
@@ -18,4 +18,4 @@ const AboutPage = () => {
   )
 }
 
-export default AboutPage
+export default VolunteerPage

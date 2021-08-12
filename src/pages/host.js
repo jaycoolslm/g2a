@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import Navbar from '../components/navbar'
 import SignupForm from '../components/hostForm'
 import TextCenter from '../components/textCenter'
-import { Button } from '@material-ui/core'
+
+import landing from '../images/svg-assets/landingBackground.svg'
+
 import {
   show,
-  hide
+  hide,
+  container
 } from '../components/on-off.module.css'
 
 const HostPage = () => {
@@ -19,23 +22,24 @@ const HostPage = () => {
   return (
     <main>
       <Navbar></Navbar>
-      <div className={display ? hide : show}>
-        <TextCenter
-          subtitle="Want to host your own volunteers?"
-        >
-          <h3>Use our easy sign up form to begin</h3>
-          <Button
-            onClick={handleClick}
-            color='#5fa28f'
-          >
-            Apply now
-          </Button>
-        </TextCenter>
+      <div style={{ backgroundImage: `url(${landing})` }}>
+        <div className={display ? hide : show && container}>
+          <div>
+            <TextCenter
+              subtitle="Want to host your own volunteers?"
+            >
+              <h3>Use our easy sign up form to begin</h3>
+              <button type="submit" onClick={handleClick}>Apply now</button>
+            </TextCenter>
+          </div>
+        
+        </div>
+        
+        <div className={display ? show : hide} style={{ backgroundColor: 'white' }}>
+          <SignupForm></SignupForm>
+        </div>  
       </div>
       
-      <div className={display ? show : hide}>
-        <SignupForm></SignupForm>
-      </div>
       
     </main>
   )

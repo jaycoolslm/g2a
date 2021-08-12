@@ -56,7 +56,7 @@ const Navbar = () => {
       
       <ul className={navDisplay ? open : closed}>
         <li><Link to="/" className={navLi}>Home</Link></li>
-        <li><Link to="/about" className={navLi}>About</Link></li>
+        <li><Link to="/volunteer" className={navLi}>Volunteer</Link></li>
         <li><Link to="/host" className={navLi}>Host</Link></li>
       </ul>
     </nav>

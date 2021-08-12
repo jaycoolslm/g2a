@@ -1,11 +1,15 @@
 .container {
     display: flex;
-    justify-content: center;
-    height: 60vh;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75vh;
 }
 
 .textArea {
-    width: 40%;
-    margin-right: 50%;
     text-align: end;
+    width: 50vw !important;
+}
+
+.imgcontainer {
+    max-width: 30vw;
 }
