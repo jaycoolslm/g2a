@@ -26,7 +26,7 @@ const TextRight = ({subtitle, children, image, alt}) => {
             <div className={textArea}>
                 <h1>{subtitle}</h1>
                 {children}
-                <Link><button type="submit">Start Volunteering</button></Link>
+                <Link to="/volunteer"><button type="submit">Start Volunteering</button></Link>
             </div>
         </main>
 
