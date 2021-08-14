@@ -1,10 +1,13 @@
 .container {
     display: flex;
-    justify-content: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 .textArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
     text-align: center;
 }
