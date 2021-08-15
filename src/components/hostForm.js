@@ -4,6 +4,7 @@ import * as Yup from "yup"
 import { TextField, Checkbox, FormControlLabel } from '@material-ui/core';
 import FastfoodIcon from '@material-ui/icons/Fastfood';
 
+
 // Stylesheet
 
 import {
@@ -12,9 +13,28 @@ import {
   show
 } from './hostForm.module.css'
 
+
+
+// Email form handling
+
+import emailjs from "emailjs-com";
+emailjs.init('user_Ifh3Sj4fnoi3UUEWAz6Er')
+
+
 // Component
 
 const SignupForm = () => {
+
+  function sendEmail() {
+    let templateParams = formik.values
+
+    emailjs.send('service_mdtterr', 'template_x6jugca', templateParams)
+      .then((result) => {
+          console.log('SUCCESS!', result.status, result.text)  //This is if you still want the page to reload (since e.preventDefault() cancelled that behavior) 
+      }, (error) => {
+          console.log('FAILED...', error);
+      });
+  }
 
   const [foodToggle, displayFood] = useState(true)
 
@@ -49,14 +69,12 @@ const SignupForm = () => {
         location: Yup.string().min(10, 'You must include the country and rough area').required('Required'),
         food: Yup.string()
       }),
-      onSubmit: values => {
-        alert(JSON.stringify(values, null, 2));
-      },
+      onSubmit: sendEmail,
     });
 
 
     return (
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={formik.handleSubmit} className="form">
         <div>
           <TextField
             variant="outlined"
