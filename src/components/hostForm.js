@@ -34,6 +34,8 @@ const SignupForm = () => {
       }, (error) => {
           console.log('FAILED...', error);
       });
+
+      alert(`Success! Form submitted.`)
   }
 
   const [foodToggle, displayFood] = useState(true)
